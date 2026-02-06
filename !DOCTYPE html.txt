@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day Saloni ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(to right,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+section{
+padding:80px 20px;
+}
+
+h1{
+font-size:40px;
+}
+
+p{
+font-size:20px;
+max-width:750px;
+margin:auto;
+line-height:1.6;
+}
+
+button{
+padding:12px 25px;
+font-size:16px;
+border:none;
+border-radius:30px;
+margin:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.yes{
+background:white;
+color:#ff4e78;
+}
+
+.no{
+background:#ff4e78;
+color:white;
+position:relative;
+}
+
+footer{
+padding:50px 20px;
+background:rgba(0,0,0,0.2);
+}
+
+.heart{
+position:fixed;
+color:white;
+animation:float 6s linear infinite;
+font-size:20px;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
+}
+
+#popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+color:#ff4e78;
+padding:30px;
+border-radius:20px;
+text-align:center;
+max-width:300px;
+}
+
+.typing{
+border-right:2px solid white;
+display:inline-block;
+white-space:nowrap;
+overflow:hidden;
+animation:typing 4s steps(20,end), blink .7s infinite;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:100%}
+}
+
+@keyframes blink{
+50%{border-color:transparent}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6c2d3f9a6e.mp3?filename=romantic-background-112191.mp3" type="audio/mpeg">
+</audio>
+
+<section>
+<h1>🌹 Happy Rose Day 🌹</h1>
+<h1 class="typing">Saloni ❤️</h1>
+<p>
+Long distance hai...  
+Par connection dil ka hai 💕  
+Aur mera dil sirf ek naam janta hai...
+</p>
+</section>
+
+<section>
+<h1>Mini Love Story 📖</h1>
+<p>
+Ek ladka tha... naam tha Pawan 😎  
+Ek din uski life me ek ladki aayi... naam tha Saloni 💖  
+Pehle baatein hui... phir hasi...  
+phir thoda care... phir thoda pyaar...  
+Aur dheere dheere... woh ladki uski duniya ban gayi.
+</p>
+</section>
+
+<section>
+<h1>Ek Sawal 🤭</h1>
+<p>
+Future me agar main apna life partner dekhun...  
+Toh kya main dekhun?
+</p>
+
+<button class="yes" onclick="showLove()">😍 Interested ho dekhna me</button>
+<button class="no" onmouseover="moveButton(this)">🙈 Nahi ho interested</button>
+
+<p id="result" style="margin-top:30px;font-weight:bold;"></p>
+</section>
+
+<section>
+<h1>Mera Pyar Kaisa Hai? ❤️</h1>
+<p>
+Mera pyaar caring hai… loyal hai…  
+thoda possessive bhi hai 😜  
+Par sabse important…  
+ye sirf aur sirf Saloni ke liye hai 💕
+</p>
+
+<button class="yes" onclick="openPopup()">💍 Ek aur Surprise</button>
+</section>
+
+<footer>
+<h2>Forever Yours, Pawan ❤️</h2>
+</footer>
+
+<!-- Proposal Popup -->
+<div id="popup">
+<div class="popup-content">
+<h2>Saloni 💖</h2>
+<p>Kya tum mere saath hamesha rehna pasand karogi? 🌹</p>
+<button onclick="closePopup()">Haan 💕</button>
+</div>
+</div>
+
+<script>
+
+function showLove(){
+document.getElementById("result").innerHTML =
+"Obviously... mera future sirf tumhare saath hai Saloni ❤️✨";
+}
+
+function moveButton(btn){
+btn.style.position="absolute";
+btn.style.top=Math.random()*80+"%";
+btn.style.left=Math.random()*80+"%";
+}
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=Math.random()*20+10+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+}
+
+setInterval(createHeart,500);
+
+function openPopup(){
+document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+alert("Yayyy ❤️ You just made Pawan the happiest person 😍");
+}
+
+</script>
+
+</body>
+</html>

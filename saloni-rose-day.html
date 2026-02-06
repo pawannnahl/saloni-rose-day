@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day Saloni ❤️</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 30px rgba(0,0,0,0.2);
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .rose {
+        font-size: 60px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        background: white;
+        color: #ff4e78;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff4e78;
+        color: white;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="rose">🌹</div>
+    <h1>Happy Rose Day Saloni ❤️</h1>
+    <p>Long distance sahi...  
+    Par feelings bilkul close hain 💕</p>
+    
+    <p>Yeh virtual rose tumhare liye,  
+    kyunki tum meri life ka sabse khoobsurat phool ho 🌹</p>
+    
+    <button onclick="showMessage()">Click for Surprise 💌</button>
+    
+    <p id="message" style="margin-top:15px; font-weight:bold;"></p>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("message").innerHTML =
+    "Saloni, I am really lucky to have you 💖<br>– Yours, Pawan";
+}
+</script>
+
+</body>
+</html>
